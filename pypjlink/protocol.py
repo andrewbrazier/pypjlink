@@ -43,6 +43,7 @@ def parse_response(f, encoding, data=''):
     assert sep == '='
 
     param = read_until(f, '\r', encoding)
+    param = param.lstrip()
 
     return (body, param)
 
